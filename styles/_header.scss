@@ -1,0 +1,207 @@
+header{
+    // border: 1px solid magenta;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding :2rem 2.4rem 2rem 2rem;
+    position: relative;
+
+    .hamburger-logo-group{
+        // border:1px solid rgba(35, 104, 28, 0.527) ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.6rem;
+
+
+         .hamburger{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            cursor: pointer;
+
+            .line{
+            background-color: $Dark-grayish-blue;
+            width: 1.5rem;
+            height: 0.3rem;
+            }
+        }
+        .menu{
+            background-color: $Black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            z-index: 10;
+            .slide-menu {
+                background-color: $White;
+                height: 100%;
+                width: 66vw;
+                padding: 2.5rem;
+
+                img {
+
+                    transition: transform 0.5s ;
+                    &:hover{
+                        cursor: pointer;
+                        transform: rotate(90deg);
+                    }
+                }
+                ul{
+                    margin-top:5rem;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    display: flex;
+                    flex-direction: column;
+                    gap:2.5rem;
+
+                    list-style: none;
+                    a :active, a:visited{
+                        color: $Very-dark-blue;
+                        text-decoration: unset;
+
+                        &:hover{
+                            text-decoration: underline;
+                            opacity: 0.75;
+                        }
+                    }
+                }
+
+            }
+        }
+        .hidden {
+            display: none;
+        }
+
+    }
+
+    .cart-avatar-group{
+
+        // border:1px solid blue ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.2rem;
+
+        .btnCart{
+            cursor: pointer;
+            position: relative;
+            .cart-count{
+                position: absolute;
+                top:-25%;
+                right: -25%;
+                background-color: $Orange;
+                font-size:1rem;
+                font-weight: 700;
+                line-height: 100%;
+                padding: 0.1rem 0.6rem;
+                border-radius:1rem;
+
+            }
+        }
+        .avatar{
+            width: 2.4rem;
+            cursor: pointer;
+            &:hover {
+                border:2px solid $Orange;
+                border-radius:50%;
+
+            }
+        }
+    }
+    .cart{
+        position: absolute;
+        right: 1rem;
+        top:calc(calc(100% )+1rem);
+        width: 35.5rem;
+        z-index: 1;
+        background-color: $White;
+        border-radius:1rem;
+
+
+        .cart-header{
+            border-bottom: 1px solid $Grayish-blue;
+            padding: 2.4rem 2rem;
+            font-size: 1.6rem;
+            font-weight:700;
+        }
+        .products-in-cart{
+
+
+            .items{
+                margin: 2.4rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+
+            .product-img{
+                width: 5rem;
+                border-radius:0.5rem;
+             }
+
+            .details{
+                color: $Dark-grayish-blue;
+                font-size:1.6rem;
+                line-height: 2.6rem;
+
+                .price-group{
+                    display: flex;
+                    gap: 0.6rem;
+
+                    .total-amount{
+
+                        font-weight: 700;
+                        font-size:1.7rem;
+                        color: $Black;
+                    }
+                }
+
+            }
+            #btnDelete{
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                    &:hover{
+                        cursor : pointer;
+                        background-color:$Pale-orange;
+
+                }
+            }
+
+            }
+        }
+        .msg-empty{
+            color:$Dark-grayish-blue;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight:700;
+            padding:7.8rem 0;
+
+        }
+        .checkout{
+            background-color: $Orange;
+            color: $White;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight:700;
+            margin: 2.4rem;
+            padding:1.8rem;
+            cursor: pointer;
+            border-radius:1rem;
+        }
+        .hidden {
+            display: none;
+        }
+
+    }
+    .hidden {
+        display: none;
+    }
+
+}
